@@ -7,7 +7,6 @@ import { registerGotRoutes } from "./got/index.js";
 import { COMPLIMENTS } from "./compliments.js";
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 // Basic middleware
 app.use(express.json());
