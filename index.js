@@ -4,6 +4,7 @@ console.log("[BOOT] GoT House Quiz API starting…");
 import "dotenv/config";
 import express from "express";
 import { registerGotRoutes } from "./got/index.js";
+import { COMPLIMENTS } from "./compliments.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -18,10 +19,6 @@ app.get("/", (_req, res) => {
     .send("Game of Thrones House Quiz API is online. Use /got/start and /got/answer.");
 });
 
-import express from "express";
-import { COMPLIMENTS } from "./compliments.js";
-
-const app = express();
 
 // Health check
 app.get("/", (_req, res) => {
