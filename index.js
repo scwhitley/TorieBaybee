@@ -50,18 +50,14 @@ app.get("/compliment.json", (_req, res) => {
   res.json({ compliment: COMPLIMENTS[idx], total: COMPLIMENTS.length });
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Compliment API listening on :${PORT}`);
-});
 
 
 // Register all GoT quiz HTTP routes
 registerGotRoutes(app);
 
-// Start server
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`[BOOT] Listening on port ${PORT}`);
+  console.log(`Compliment API listening on :${PORT}`);
 });
 
 
